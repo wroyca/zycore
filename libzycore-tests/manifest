@@ -6,7 +6,6 @@ language: c++
 project: zycore
 summary: Internal library providing platform independent types, macros and a fallback for environments without LibC ; Tests
 license: MIT ; MIT License.
-description-file: README.md
 url: https://github.com/zyantific/zycore-c
 package-url: https://github.com/build2-packaging/zycore/
 email: packaging@build2.org ; Mailing list.

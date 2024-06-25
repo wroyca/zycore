@@ -6,6 +6,7 @@ project: zycore
 summary: Internal library providing platform independent types, macros and a fallback for environments without LibC
 license: MIT
 description-file: README.md
+package-description-file: PACKAGE-README.md
 url: https://github.com/zyantific/zycore-c
 package-url: https://github.com/build2-packaging/zycore/
 email: packaging@build2.org ; Mailing list.
