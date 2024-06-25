@@ -37,6 +37,16 @@ lib{zycore}:
   c.export.libs = $intf_libs
 }
 
+if ($c.target.class != 'windows')
+{
+  c.libs += -pthread
+
+  lib{zycore}:
+  {
+    c.export.libs += -pthread
+  }
+}
+
 #liba{zycore}: c.export.poptions += -DZYCORE_STATIC
 #libs{zycore}: c.export.poptions += -DZYCORE_SHARED
 
