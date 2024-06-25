@@ -1,6 +1,6 @@
 : 1
 name: libzycore
-version: 1.5.0
+version: 1.5.0+1
 language: c
 project: zycore
 summary: Internal library providing platform independent types, macros and a fallback for environments without LibC

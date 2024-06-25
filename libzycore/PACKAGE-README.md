@@ -4,7 +4,7 @@ The `libzycore` C library provides platform-independent types, macros, and fallb
 
 ## Usage
 
-To start using `libzycore` in your project, add the following `depends` value to your `manifest`, adjusting the version constraint as appropriate:
+To start using `libzycore` in your project, add the following [`depends`](https://build2.org/bpkg/doc/build2-package-manager-manual.xhtml#manifest-package-depends) value to your [`manifest`](https://build2.org/bpkg/doc/build2-package-manager-manual.xhtml#manifests), adjusting the version constraint as appropriate:
 
 ```
 depends: libzycore ^1.5.0
@@ -15,3 +15,15 @@ Then import the library in your `buildfile`:
 ```
 import libs = libzycore%lib{zycore}
 ```
+
+## Importable targets
+
+This package provides the following importable targets:
+
+```
+lib{zycore}
+```
+
+### Importable targets description
+
+* `zycore` - C library for platform-independent types, macros, and fallbacks for environments without libc.

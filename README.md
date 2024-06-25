@@ -1,10 +1,10 @@
-# Zycore - Zyan Core Library for C
+# Zycore - Platform-independent types, macros, and fallbacks for environments without libc.
 
-This is a `build2` package repository for [`zycore-c`](https://github.com/zyantific/zycore-c).
+This is a [`build2`](https://build2.org/) package repository for [`zycore-c`](https://github.com/zyantific/zycore-c).
 
-This file contains setup instructions and other details that are more appropriate for development rather than consumption. If you want to use `zycore` in your `build2`-based project, then instead see the accompanying [`PACKAGE-README.md`](libzycore/PACKAGE-README.md) file.
+This file contains setup instructions and other details that are more appropriate for development rather than consumption. If you want to use [`zycore`](https://github.com/zyantific/zycore-c) in your [`build2`](https://build2.org/)-based project, then instead see the accompanying [`PACKAGE-README.md`](libzycore/PACKAGE-README.md) file.
 
-The development setup for `zycore` uses the standard `bdep`-based workflow. For example:
+The development setup for [`zycore`](https://github.com/zyantific/zycore-c) uses the standard [`bdep`](https://build2.org/bdep/doc/bdep.xhtml)-based workflow. For example:
 
 ```
 git clone .../zycore.git
