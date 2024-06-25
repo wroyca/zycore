@@ -1,5 +1,7 @@
 # Upstream tests are written in C++
-#
+
+cxx.std = latest
+
 using cc
 
 hxx{*}: extension = hxx
