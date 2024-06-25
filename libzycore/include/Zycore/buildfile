@@ -1,0 +1,12 @@
+pub_hdrs = h{**}
+
+./: $pub_hdrs
+
+# Install into the Zycore/ subdirectory of, say, /usr/include/
+# recreating subdirectories.
+#
+h{*}:
+{
+  install         = include/Zycore/
+  install.subdirs = true
+}

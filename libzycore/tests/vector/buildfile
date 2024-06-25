@@ -1,0 +1,4 @@
+import libs = libzycore%lib{zycore} \
+                  gtest%lib{gtest}
+
+exe{driver}: cxx{**} $libs testscript{**}
