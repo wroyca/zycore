@@ -1,0 +1,3 @@
+import libs = libzycore%lib{zycore}
+
+exe{driver}: {h c}{**} $libs testscript{**}

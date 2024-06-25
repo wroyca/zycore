@@ -1,14 +1,15 @@
 : 1
-name: libzycore
+name: libzycore-tests
 version: 1.5.0-a.0.z
-language: c
+type: exe
+language: c++
 project: zycore
-summary: Internal library providing platform independent types, macros and a fallback for environments without LibC
-license: MIT
+summary: Internal library providing platform independent types, macros and a fallback for environments without LibC ; Tests
+license: MIT ; MIT License.
 description-file: README.md
 url: https://github.com/zyantific/zycore-c
 package-url: https://github.com/build2-packaging/zycore/
 email: packaging@build2.org ; Mailing list.
 depends: * build2 >= 0.17.0
 depends: * bpkg >= 0.17.0
-tests: libzycore-tests == $
+depends: gtest ^1.11.0
