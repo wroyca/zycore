@@ -26,8 +26,8 @@ src_pfx_src = [dir_path] $src_root/src/
 c.poptions =+ "-I$out_pfx_src" "-I$src_pfx_src" \
               "-I$out_pfx_inc" "-I$src_pfx_inc"
 
-#obja{*}: c.poptions += -DZYCORE_STATIC_BUILD
-#objs{*}: c.poptions += -DZYCORE_SHARED_BUILD
+obja{*}: c.poptions += -DZYCORE_STATIC_BUILD
+objs{*}: c.poptions += -DZYCORE_SHARED_BUILD -DZYCORE_SHOULD_EXPORT
 
 # Export options.
 #
@@ -47,8 +47,8 @@ if ($c.target.class != 'windows')
   }
 }
 
-#liba{zycore}: c.export.poptions += -DZYCORE_STATIC
-#libs{zycore}: c.export.poptions += -DZYCORE_SHARED
+liba{zycore}: c.export.poptions += -DZYCORE_STATIC -DZYCORE_STATIC_BUILD
+libs{zycore}: c.export.poptions += -DZYCORE_SHARED
 
 # For pre-releases use the complete version to make sure they cannot
 # be used in place of another pre-release or the final version. See
