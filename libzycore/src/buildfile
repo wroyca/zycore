@@ -26,6 +26,12 @@ src_pfx_src = [dir_path] $src_root/src/
 c.poptions =+ "-I$out_pfx_src" "-I$src_pfx_src" \
               "-I$out_pfx_inc" "-I$src_pfx_inc"
 
+# Zycore is a libc replacement. On Windows, it's necessary to explicitly
+# define no_libc for Zycore types.
+#
+if ($c.target.class == 'windows')
+  c.poptions += -DZYAN_NO_LIBC
+
 obja{*}: c.poptions += -DZYCORE_STATIC_BUILD
 objs{*}: c.poptions += -DZYCORE_SHARED_BUILD -DZYCORE_SHOULD_EXPORT
 
@@ -47,7 +53,7 @@ if ($c.target.class != 'windows')
   }
 }
 
-liba{zycore}: c.export.poptions += -DZYCORE_STATIC -DZYCORE_STATIC_BUILD
+liba{zycore}: c.export.poptions += -DZYCORE_STATIC
 libs{zycore}: c.export.poptions += -DZYCORE_SHARED
 
 # For pre-releases use the complete version to make sure they cannot
